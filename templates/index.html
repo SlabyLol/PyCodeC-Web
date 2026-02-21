@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PyCodeC Web</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>PyCodeC Web - Upload Python File</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="pyfile" required>
+        <button type="submit">Build EXE</button>
+    </form>
+    <div id="tips-container">
+        <p id="tips">Tip: {{ tips[0] }}</p>
+    </div>
+    <div id="log">
+        <p>Server log will appear here (see console)</p>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
