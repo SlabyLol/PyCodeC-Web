@@ -1,0 +1,10 @@
+flask
+pyinstaller
+pillow
+requests
+setuptools
+wheel
+virtualenv
+buildozer
+cython
+kivy
