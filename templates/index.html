@@ -1,25 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>PyCodeC Web</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>PyCodeC Web - Upload Python File</h1>
-        <form method="post" enctype="multipart/form-data" class="upload-form">
-            <input type="file" name="pyfile" required>
-            <button type="submit">Build EXE</button>
+        <h1>PyCodeC Web</h1>
+        <p class="subtitle">Simulated EXE / APK Builder (Frontend Only)</p>
+
+        <form id="uploadForm">
+            <input type="file" id="pyfile" accept=".py" required>
+            <button type="submit">Start Build</button>
         </form>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
 
         <div id="tips-container">
             <p id="tips">Tip: First build can take several minutes.</p>
         </div>
 
         <div id="log">
-            <p>Server log will appear here (check console for now)</p>
+            <p>Log output will appear here (simulated)</p>
         </div>
     </div>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <script src="static/script.js"></script>
 </body>
 </html>
